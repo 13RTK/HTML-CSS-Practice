@@ -1,0 +1,54 @@
+article {
+  border: 4px solid black;
+  font-family: sans-serif;
+}
+
+li {
+  list-style: square;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+article p:nth-child(4) {
+  text-transform: uppercase;
+  color: #938888;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+article p:nth-child(3) {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #d5cece6b;
+}
+
+.prod-details {
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+button {
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  color: black;
+  background-color: white;
+}
