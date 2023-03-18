@@ -27,31 +27,20 @@ body {
   height: 80px;
 }
 
-h1 {
-  float: left;
-}
-
 nav {
   font-size: 18px;
-  float: right;
-}
-
-clearfix::after {
-  content: "";
-  clear: both;
 }
 
 article {
   margin-bottom: 60px;
-  float: left;
-  width: 825px;
 }
 
 .post-header {
   margin-bottom: 40px;
 }
 
-.author-img {
+/* FLOATS */
+/* .author-img {
   float: left;
   margin-bottom: 20px;
 }
@@ -62,6 +51,36 @@ article {
   margin-left: 20px;
 }
 
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+clearfix::after {
+  content: "";
+  clear: both;
+}
+
+article {
+  float: left;
+  width: 825px;
+}
+
+aside {
+  width: 300px;
+  float: right;
+}
+
+footer {
+  clear: both;
+}
+
+
+*/
+
 aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
@@ -69,9 +88,6 @@ aside {
   /* padding-top: 50px;
   padding-bottom: 50px; */
   padding: 50px 40px;
-  width: 300px;
-
-  float: right;
 }
 
 /* smaller elements */
@@ -125,10 +141,6 @@ li:last-child {
   margin-bottom: 0;
 }
 
-footer {
-  clear: both;
-}
-
 #copyright {
   font-size: 16px;
 }
@@ -163,9 +175,9 @@ li:last-child {
 /* li:nth-child(even) {
 } */
 
-article p:last-child {
+/* article p:last-child {
   color: red;
-}
+} */
 
 a:link {
   color: #1098ad;
@@ -199,7 +211,6 @@ nav a:link {
   display: block; */
 
   margin-right: 30px;
-  margin-top: 10px;
   display: inline-block;
 }
 
@@ -219,7 +230,7 @@ h1::first-letter {
 }
 
 h3 + p::first-line {
-  color: red;
+  /* color: red; */
 }
 
 h2 {
@@ -241,11 +252,56 @@ h2::after {
   right: -25px;
 }
 
-/* CSS conflicts */
-/* #copyright {
-  color: blueviolet;
+/* flex box */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-footer p {
-  color: pink !important;
-} */
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.related-author {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
+}
+
+article {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+aside {
+  flex: 0 0 300px;
+}
